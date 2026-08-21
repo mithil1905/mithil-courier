@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mithil Courier Services | Ultra-Fast Express & Logistics</title>
+  <meta name="description" content="Mithil Courier Services delivers speed, precision, and reliable parcel logistics across 240+ cities. Track shipments in real-time and book express couriers instantly.">
+  
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Core Design System -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Glowing Mesh & Brand Atmosphere -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+  <div class="ambient-grid"></div>
+  <div class="brand-ambient-backdrop"></div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" id="header-brand-logo">
+        <div class="logo-icon"><i class="fas fa-bolt-lightning"></i></div>
+        <div class="brand-name">Mithil <span>Courier</span></div>
+      </a>
+
+      <nav class="nav-menu" id="primary-nav-menu">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="booking.html" class="nav-link">Book Courier</a>
+        <a href="tracking.html" class="nav-link">Track Shipment</a>
+        <a href="contact.html" class="nav-link">Contact & Support</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="booking.html" class="btn btn-primary btn-sm" id="nav-book-btn">
+          <i class="fas fa-paper-plane"></i> Book Shipment
+        </a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" id="mobile-toggle-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-grid">
+      
+      <!-- Hero Left Copy -->
+      <div class="hero-content">
+        <span class="badge">
+          <span class="pulse-dot"></span> Next-Gen Logistics & Courier 2026
+        </span>
+        <h1>Lightning Fast Delivery. <br><span class="grad-text">Zero Compromise.</span></h1>
+        <p class="hero-subtitle">
+          Experience hyper-speed parcel delivery, state-of-the-art live GPS tracking, and seamless automated door-to-door courier services nationwide.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="booking.html" class="btn btn-primary btn-lg" id="hero-book-cta">
+            <i class="fas fa-box-open"></i> Book a Courier Now
+          </a>
+          <a href="tracking.html" class="btn btn-glass btn-lg" id="hero-track-cta">
+            <i class="fas fa-location-crosshairs"></i> Live Tracking
+          </a>
+        </div>
+
+        <div class="hero-trust-bar">
+          <div class="trust-item">
+            <i class="fas fa-shield-halved trust-icon"></i>
+            <div class="trust-text">100% Insured Freight</div>
+          </div>
+          <div class="trust-item">
+            <i class="fas fa-stopwatch trust-icon"></i>
+            <div class="trust-text">99.8% On-Time Delivery</div>
+          </div>
+          <div class="trust-item">
+            <i class="fas fa-headset trust-icon"></i>
+            <div class="trust-text">24/7 Live Monitoring</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Right Interactive Quick Track & Visual Fleet Card -->
+      <div class="hero-visual">
+        <div class="hero-track-box">
+          <div class="hero-image-card">
+            <img src="../images/hero_van.jpg" alt="Mithil Express Courier Fleet">
+            <div class="card-img-badge"><i class="fas fa-bolt"></i> Ultra-Velocity Express Van</div>
+          </div>
+
+          <div class="track-box-header">
+            <div class="track-box-title"><i class="fas fa-satellite-dish" style="color: var(--cyan-primary); margin-right: 8px;"></i> Live Quick Track</div>
+            <div class="track-box-status"><i class="fas fa-circle-check"></i> System Operational</div>
+          </div>
+
+          <form action="tracking.html" method="GET" class="quick-track-form" id="hero-quick-track-form">
+            <div class="track-input-wrapper">
+              <i class="fas fa-barcode" style="color: var(--text-muted); margin-right: 12px; font-size: 1.2rem;"></i>
+              <input type="text" name="track" id="hero-track-input" placeholder="Enter AWB or Tracking ID (e.g. MCS-88219)" required>
+              <button type="submit" class="btn btn-primary btn-sm">Track</button>
+            </div>
+          </form>
+
+          <div class="sample-pills">
+            <span class="sample-label">Try sample:</span>
+            <span class="sample-code-chip" data-code="MCS-88219" onclick="document.getElementById('hero-track-input').value='MCS-88219'">MCS-88219</span>
+            <span class="sample-code-chip" data-code="MCS-40912" onclick="document.getElementById('hero-track-input').value='MCS-40912'">MCS-40912</span>
+            <span class="sample-code-chip" data-code="MCS-10554" onclick="document.getElementById('hero-track-input').value='MCS-10554'">MCS-10554</span>
+          </div>
+
+          <!-- Live Sample Visual Route -->
+          <div class="delivery-live-preview">
+            <div class="preview-route">
+              <span><i class="fas fa-plane-departure" style="color: var(--cyan-primary);"></i> Mumbai (BOM)</span>
+              <span><i class="fas fa-arrow-right-long" style="color: var(--orange-accent);"></i></span>
+              <span><i class="fas fa-plane-arrival" style="color: var(--emerald-success);"></i> Bengaluru (BLR)</span>
+            </div>
+            <div class="preview-bar">
+              <div class="preview-bar-fill"></div>
+            </div>
+            <div class="preview-info">
+              <span>Status: <strong>Out for Delivery</strong></span>
+              <span>ETA: <strong>Today, 6:00 PM</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Live Statistics Counter -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number" data-target="580000" data-suffix="+">580,000<span>+</span></div>
+          <div class="stat-label">Parcels Delivered Safely</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="240" data-suffix="+">240<span>+</span></div>
+          <div class="stat-label">Cities Connected</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="99" data-suffix=".8%">99.8<span>%</span></div>
+          <div class="stat-label">On-Time Success Rate</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="15000" data-suffix="+">15,000<span>+</span></div>
+          <div class="stat-label">Enterprise Partners</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Offerings Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Our Services</span>
+        <h2>High-Performance Courier Solutions</h2>
+        <p>From instant same-day intra-city couriers to nationwide temperature-controlled freight, we provide tailored logistics infrastructure.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service Card 1 -->
+        <div class="service-card">
+          <div class="card-img-wrap">
+            <img src="../images/service-sameday.jpg" alt="Same-Day Ultra Express">
+            <span class="card-img-badge"><i class="fas fa-bolt"></i> Sub-12 Hr Guaranteed</span>
+          </div>
+          <div class="service-icon-box"><i class="fas fa-jet-fighter-up"></i></div>
+          <h3 class="service-title">Same-Day Ultra Express</h3>
+          <p class="service-desc">Guaranteed sub-12 hour city-to-city air priority delivery for time-critical documents, electronics, and sensitive consignments.</p>
+          <div class="service-meta">
+            <span>Guaranteed Speed</span>
+            <a href="booking.html" style="color: var(--cyan-primary);">Book <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Service Card 2 -->
+        <div class="service-card">
+          <div class="card-img-wrap">
+            <img src="../images/service-aircargo.jpg" alt="Express Air Cargo">
+            <span class="card-img-badge"><i class="fas fa-plane"></i> Daily Scheduled</span>
+          </div>
+          <div class="service-icon-box"><i class="fas fa-plane-departure"></i></div>
+          <h3 class="service-title">Express Air Cargo</h3>
+          <p class="service-desc">Dedicated daily scheduled flights across major domestic and international hubs with real-time temperature and shock monitoring.</p>
+          <div class="service-meta">
+            <span>24-48 Hour Transit</span>
+            <a href="booking.html" style="color: var(--cyan-primary);">Book <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Service Card 3 -->
+        <div class="service-card">
+          <div class="card-img-wrap">
+            <img src="../images/service-surface.jpg" alt="Surface Freight Network">
+            <span class="card-img-badge orange"><i class="fas fa-truck"></i> Heavy Cargo</span>
+          </div>
+          <div class="service-icon-box"><i class="fas fa-truck-moving"></i></div>
+          <h3 class="service-title">Surface Freight Network</h3>
+          <p class="service-desc">Heavy commercial transport and cost-effective bulk parcel cargo equipped with active GPS tracking and all-weather containers.</p>
+          <div class="service-meta">
+            <span>Economical Bulk</span>
+            <a href="booking.html" style="color: var(--cyan-primary);">Book <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Service Card 4 -->
+        <div class="service-card">
+          <div class="card-img-wrap">
+            <img src="../images/service-ecommerce.jpg" alt="E-Commerce & COD Logistics">
+            <span class="card-img-badge"><i class="fas fa-box-check"></i> COD & API Ready</span>
+          </div>
+          <div class="service-icon-box"><i class="fas fa-cart-flatbed-suitcase"></i></div>
+          <h3 class="service-title">E-Commerce & COD Logistics</h3>
+          <p class="service-desc">Comprehensive order fulfillment, rapid cash-on-delivery reconciliation, automated reverse pick-up, and return management.</p>
+          <div class="service-meta">
+            <span>API Integrated</span>
+            <a href="booking.html" style="color: var(--cyan-primary);">Book <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Service Card 5 -->
+        <div class="service-card">
+          <div class="card-img-wrap">
+            <img src="../images/service-coldchain.jpg" alt="Cold Chain & Pharma">
+            <span class="card-img-badge emerald"><i class="fas fa-snowflake"></i> 2°C - 8°C Monitored</span>
+          </div>
+          <div class="service-icon-box"><i class="fas fa-temperature-arrow-down"></i></div>
+          <h3 class="service-title">Cold Chain & Pharma</h3>
+          <p class="service-desc">Calibrated climate-controlled storage and expedited courier delivery for vital pharmaceuticals, vaccines, and bio-samples.</p>
+          <div class="service-meta">
+            <span>Pharma Certified</span>
+            <a href="booking.html" style="color: var(--cyan-primary);">Book <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Service Card 6 -->
+        <div class="service-card">
+          <div class="card-img-wrap">
+            <img src="../images/service-document.jpg" alt="Confidential Document Courier">
+            <span class="card-img-badge orange"><i class="fas fa-shield"></i> Biometric OTP</span>
+          </div>
+          <div class="service-icon-box"><i class="fas fa-file-shield"></i></div>
+          <h3 class="service-title">Confidential Document Courier</h3>
+          <p class="service-desc">Tamper-evident barcode-sealed envelopes with biometric OTP verification at pickup and final doorstep delivery.</p>
+          <div class="service-meta">
+            <span>100% Tamper Proof</span>
+            <a href="booking.html" style="color: var(--cyan-primary);">Book <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Process Workflow -->
+  <section class="section" style="background: rgba(10, 15, 26, 0.5);">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-orange">Seamless Workflow</span>
+        <h2>How Mithil Courier Works</h2>
+        <p>Simple, automated, and hyper-transparent logistics process from your doorstep to the recipient.</p>
+      </div>
+
+      <div class="process-grid">
+        <div class="process-step">
+          <div class="process-icon-wrap">
+            <span class="process-step-num">01</span>
+            <i class="fas fa-laptop-file"></i>
+          </div>
+          <h4>1. Easy Online Booking</h4>
+          <p>Choose your package type, calculate transparent rates, and schedule an immediate doorstep pickup.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-icon-wrap">
+            <span class="process-step-num">02</span>
+            <i class="fas fa-truck-pickup"></i>
+          </div>
+          <h4>2. Doorstep Collection</h4>
+          <p>Our verified courier executive collects, weighs, and seals your parcel with tamper-proof smart barcodes.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-icon-wrap">
+            <span class="process-step-num">03</span>
+            <i class="fas fa-satellite"></i>
+          </div>
+          <h4>3. Live Automated Transit</h4>
+          <p>Track your shipment at every hub milestone with GPS accuracy and instant WhatsApp/SMS milestones.</p>
+        </div>
+
+        <div class="process-step">
+          <div class="process-icon-wrap">
+            <span class="process-step-num">04</span>
+            <i class="fas fa-signature"></i>
+          </div>
+          <h4>4. Safe OTP Delivery</h4>
+          <p>Recipient receives delivery via secured OTP authentication with real-time digital proof of delivery.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Rate Calculator & Highlights -->
+  <section class="section">
+    <div class="container feature-split">
+      <div>
+        <span class="badge">Instant Estimation</span>
+        <h2 style="font-size: 2.4rem; margin: 16px 0;">Calculate Shipping Rates Instantly</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 24px;">
+          No hidden fees or surprises. Get guaranteed upfront shipping cost estimates based on weight, destination, and service speed.
+        </p>
+
+        <div class="feature-list">
+          <div class="feature-item">
+            <div class="feature-item-icon"><i class="fas fa-clock"></i></div>
+            <div class="feature-item-content">
+              <h4>Real-Time Transit Estimates</h4>
+              <p>Know the exact delivery timeframe before booking your shipment.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-item-icon"><i class="fas fa-shield-check"></i></div>
+            <div class="feature-item-content">
+              <h4>Complimentary Transit Cover</h4>
+              <p>Every shipment is protected up to ₹5,000 with optional full value coverage.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-item-icon"><i class="fas fa-tags"></i></div>
+            <div class="feature-item-content">
+              <h4>Volume & Business Discounts</h4>
+              <p>Special discounted pricing tiers for high-volume merchants and regular senders.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="rate-feature-img-card">
+          <img src="../images/warehouse-banner.jpg" alt="Mithil Robotic Sorting Warehouse">
+          <div class="img-overlay-caption">
+            <span style="font-size: 0.85rem; color: #fff; font-weight: 600;"><i class="fas fa-microchip" style="color: var(--cyan-primary); margin-right: 6px;"></i> 24/7 AI-Powered Robotic Sortation Facility</span>
+            <span class="badge badge-success" style="padding: 2px 8px; font-size: 0.72rem;">Live Automated</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Calculator Card -->
+      <div class="calculator-card">
+        <h3 style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+          <i class="fas fa-calculator" style="color: var(--cyan-primary);"></i> Quick Rate Estimator
+        </h3>
+
+        <div class="calc-grid">
+          <div class="form-group">
+            <label class="form-label" for="calc-origin">Origin Pincode</label>
+            <input type="text" id="calc-origin" class="form-input" placeholder="e.g. 400001 (Mumbai)" value="400001">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="calc-dest">Destination Pincode</label>
+            <input type="text" id="calc-dest" class="form-input" placeholder="e.g. 560001 (Bengaluru)" value="560001">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="calc-weight">Package Weight (KG)</label>
+            <input type="number" id="calc-weight" class="form-input" value="2.5" min="0.5" step="0.5">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="calc-service">Service Tier</label>
+            <select id="calc-service" class="form-select">
+              <option value="1.0">Standard Surface (2-4 Days)</option>
+              <option value="1.6" selected>Express Air (1-2 Days)</option>
+              <option value="2.4">Same-Day Ultra Priority</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="calc-result-box">
+          <div>
+            <span style="font-size: 0.82rem; color: var(--text-muted); text-transform: uppercase;">Estimated Total</span>
+            <div class="calc-price" id="calc-price-display">₹308</div>
+          </div>
+          <a href="booking.html" class="btn btn-orange" id="calc-proceed-btn">
+            Proceed to Book <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Client Testimonials -->
+  <section class="section" style="background: rgba(8, 12, 20, 0.6);">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Trusted by Thousands</span>
+        <h2>What Our Clients Say</h2>
+        <p>Read genuine feedback from business owners and individuals who rely on Mithil Courier daily.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars-rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Mithil Courier Services revolutionized our e-commerce dispatch. Their same-day air delivery helped us cut delivery complaints to zero. Outstanding dashboard and tracking."</p>
+          <div class="testimonial-author">
+            <img src="../images/avatar-1.jpg" alt="Arjun Deshmukh" class="author-avatar-img">
+            <div class="author-info">
+              <h5>Arjun Deshmukh</h5>
+              <span>Founder, Nexa Retail Hub</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars-rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"I regularly send confidential legal contracts across state borders. Mithil's tamper-evident OTP delivery gives me complete peace of mind every single time."</p>
+          <div class="testimonial-author">
+            <img src="../images/avatar-2.jpg" alt="Pooja Ramesh" class="author-avatar-img">
+            <div class="author-info">
+              <h5>Pooja Ramesh</h5>
+              <span>Senior Partner, Apex Legal</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars-rating">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <p class="testimonial-text">"Super easy booking wizard, lightning fast doorstep pickup in Mumbai, and delivered in Bengaluru within 24 hours. The dark UI is super sleek and easy to use!"</p>
+          <div class="testimonial-author">
+            <img src="../images/avatar-3.jpg" alt="Kiran Varma" class="author-avatar-img">
+            <div class="author-info">
+              <h5>Kiran Varma</h5>
+              <span>Operations Lead, BlueWave Tech</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner Section -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-banner">
+        <div class="cta-content">
+          <span class="badge badge-orange" style="margin-bottom: 12px;">Get Started Today</span>
+          <h2>Ready to Ship with Mithil Courier Services?</h2>
+          <p>Book your first parcel in less than 60 seconds with instant pickup and live GPS tracking.</p>
+        </div>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="booking.html" class="btn btn-primary btn-lg" id="cta-book-btn"><i class="fas fa-bolt"></i> Book Now</a>
+          <a href="contact.html" class="btn btn-glass btn-lg" id="cta-contact-btn"><i class="fas fa-phone"></i> Talk to Sales</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-icon"><i class="fas fa-bolt-lightning"></i></div>
+            <div class="brand-name">Mithil <span>Courier</span></div>
+          </a>
+          <p>Pioneering ultra-fast, tech-enabled parcel and cargo logistics across India. Speed, reliability, and security at your fingertips.</p>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Company</a>
+            <a href="booking.html">Online Booking</a>
+            <a href="tracking.html">Live Tracking</a>
+            <a href="contact.html">Branch Locations</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Logistics Services</h4>
+          <div class="footer-links">
+            <a href="booking.html">Same-Day Ultra</a>
+            <a href="booking.html">Express Air Cargo</a>
+            <a href="booking.html">Surface Freight</a>
+            <a href="booking.html">E-Commerce COD</a>
+            <a href="booking.html">Cold Chain Storage</a>
+          </div>
+        </div>
+
+        <div class="footer-col footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p>Subscribe for network expansion updates, corporate rates, and logistics insights.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed to Mithil Courier newsletter!', 'success'); this.reset();">
+            <input type="email" class="form-input" placeholder="Enter your email address" required>
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 <strong>Mithil Courier Services</strong>. All Rights Reserved.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Carriage</a>
+          <a href="contact.html">Security & Compliance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Chat Support Trigger -->
+  <button class="floating-widget-btn" id="floating-chat-trigger" title="Live Support Assistant">
+    <i class="fas fa-headset"></i>
+  </button>
+
+  <!-- Support Modal -->
+  <div class="modal-backdrop" id="quick-chat-modal">
+    <div class="modal-content">
+      <button class="modal-close-btn"><i class="fas fa-times"></i></button>
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+        <div class="logo-icon"><i class="fas fa-robot"></i></div>
+        <div>
+          <h3 style="font-size: 1.25rem;">Mithil Virtual Assistant</h3>
+          <span style="font-size: 0.8rem; color: var(--emerald-success);"><i class="fas fa-circle"></i> Online 24/7</span>
+        </div>
+      </div>
+      <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 20px;">
+        How can we assist you today? You can track a shipment, estimate costs, or connect with our dispatch center.
+      </p>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <a href="tracking.html" class="btn btn-glass" style="justify-content: flex-start;">
+          <i class="fas fa-search-location" style="color: var(--cyan-primary);"></i> Track a Consignment
+        </a>
+        <a href="booking.html" class="btn btn-glass" style="justify-content: flex-start;">
+          <i class="fas fa-box" style="color: var(--orange-accent);"></i> Book a New Pickup
+        </a>
+        <a href="contact.html" class="btn btn-glass" style="justify-content: flex-start;">
+          <i class="fas fa-phone-volume" style="color: var(--emerald-success);"></i> Call Regional Helpdesk (+91 1800-425-MITHIL)
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Bundle -->
+  <script src="../js/script.js"></script>
+</body>
+</html>

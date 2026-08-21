@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Courier Online | Mithil Courier Services</title>
+  <meta name="description" content="Book express courier and parcel pickups online with Mithil Courier Services. Real-time cost calculation, transparent pricing, and instant barcode generation.">
+  
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Core Design System -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Glowing Mesh & Brand Atmosphere -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+  <div class="ambient-grid"></div>
+  <div class="brand-ambient-backdrop"></div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" id="header-brand-logo">
+        <div class="logo-icon"><i class="fas fa-bolt-lightning"></i></div>
+        <div class="brand-name">Mithil <span>Courier</span></div>
+      </a>
+
+      <nav class="nav-menu" id="primary-nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="booking.html" class="nav-link active">Book Courier</a>
+        <a href="tracking.html" class="nav-link">Track Shipment</a>
+        <a href="contact.html" class="nav-link">Contact & Support</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="tracking.html" class="btn btn-glass btn-sm" id="nav-track-btn">
+          <i class="fas fa-location-crosshairs"></i> Track Shipment
+        </a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" id="mobile-toggle-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero Header -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="badge badge-orange"><i class="fas fa-paper-plane"></i> Instant Dispatch</span>
+      <h1>Book Courier & Cargo <br><span class="grad-text">In 4 Easy Steps</span></h1>
+      <p>Schedule a doorstep pickup anywhere in India with instant transparent pricing and automated tracking code generation.</p>
+    </div>
+  </section>
+
+  <!-- Multi-Step Booking Section -->
+  <section class="section" style="padding-top: 10px;">
+    <div class="container booking-wizard-wrapper">
+      
+      <!-- Left Column: Wizard Card -->
+      <div class="wizard-card">
+        
+        <!-- Step Indicators -->
+        <div class="wizard-steps">
+          <div class="step-indicator active" data-step="1">
+            <div class="step-bubble">1</div>
+            <div class="step-title">Sender</div>
+          </div>
+          <div class="step-indicator" data-step="2">
+            <div class="step-bubble">2</div>
+            <div class="step-title">Receiver</div>
+          </div>
+          <div class="step-indicator" data-step="3">
+            <div class="step-bubble">3</div>
+            <div class="step-title">Package</div>
+          </div>
+          <div class="step-indicator" data-step="4">
+            <div class="step-bubble">4</div>
+            <div class="step-title">Service Tier</div>
+          </div>
+        </div>
+
+        <!-- Multi-Step Form Container -->
+        <form id="booking-wizard-form">
+          
+          <!-- STEP 1: SENDER INFO -->
+          <div class="wizard-step-pane active" data-step="1">
+            <h3 style="font-size: 1.3rem; margin-bottom: 20px; color: var(--cyan-primary);">
+              <i class="fas fa-user-circle"></i> Step 1: Sender & Pickup Details
+            </h3>
+            
+            <div class="calc-grid">
+              <div class="form-group">
+                <label class="form-label" for="sender-name">Sender Full Name *</label>
+                <input type="text" id="sender-name" class="form-input" placeholder="e.g. Mithil Kumar" value="Mithil" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="sender-phone">Contact Phone *</label>
+                <input type="tel" id="sender-phone" class="form-input" placeholder="e.g. +91 98765 43210" value="+91 98765 43210" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="sender-email">Email Address</label>
+                <input type="email" id="sender-email" class="form-input" placeholder="e.g. sender@example.com" value="mithil@logistics.com">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="sender-city">Pickup City *</label>
+                <input type="text" id="sender-city" class="form-input" placeholder="e.g. Mumbai" value="Mumbai">
+              </div>
+
+              <div class="form-group full-width">
+                <label class="form-label" for="sender-address">Complete Pickup Address *</label>
+                <textarea id="sender-address" class="form-textarea" rows="2" placeholder="Building, Street, Landmark" required>Flat 402, Skyline Towers, Andheri East</textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="sender-pincode">Pickup Pincode *</label>
+                <input type="text" id="sender-pincode" class="form-input" placeholder="e.g. 400069" value="400069" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="sender-slot">Preferred Pickup Window</label>
+                <select id="sender-slot" class="form-select">
+                  <option>Morning (09:00 AM - 01:00 PM)</option>
+                  <option selected>Afternoon (01:00 PM - 05:00 PM)</option>
+                  <option>Evening Express (05:00 PM - 09:00 PM)</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 2: RECEIVER INFO -->
+          <div class="wizard-step-pane" data-step="2">
+            <h3 style="font-size: 1.3rem; margin-bottom: 20px; color: var(--cyan-primary);">
+              <i class="fas fa-location-dot"></i> Step 2: Consignee / Recipient Details
+            </h3>
+
+            <div class="calc-grid">
+              <div class="form-group">
+                <label class="form-label" for="receiver-name">Recipient Full Name *</label>
+                <input type="text" id="receiver-name" class="form-input" placeholder="e.g. Priya Sundaram" value="Priya Sundaram" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="receiver-phone">Recipient Phone *</label>
+                <input type="tel" id="receiver-phone" class="form-input" placeholder="e.g. +91 91234 56789" value="+91 91234 56789" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="receiver-email">Recipient Email (for tracking updates)</label>
+                <input type="email" id="receiver-email" class="form-input" placeholder="e.g. priya@domain.com">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="receiver-city">Destination City *</label>
+                <input type="text" id="receiver-city" class="form-input" placeholder="e.g. Bengaluru" value="Bengaluru">
+              </div>
+
+              <div class="form-group full-width">
+                <label class="form-label" for="receiver-address">Delivery Address *</label>
+                <textarea id="receiver-address" class="form-textarea" rows="2" placeholder="House/Office No, Street, Area" required>Plot 12, Koramangala 4th Block, Near Tech Hub</textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="receiver-pincode">Destination Pincode *</label>
+                <input type="text" id="receiver-pincode" class="form-input" placeholder="e.g. 560034" value="560034" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="delivery-instructions">Delivery Instructions</label>
+                <input type="text" id="delivery-instructions" class="form-input" placeholder="e.g. Leave with security if unavailable">
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3: PACKAGE SPECS -->
+          <div class="wizard-step-pane" data-step="3">
+            <h3 style="font-size: 1.3rem; margin-bottom: 20px; color: var(--cyan-primary);">
+              <i class="fas fa-boxes-stacked"></i> Step 3: Package Specifications & Add-ons
+            </h3>
+
+            <div class="calc-grid">
+              <div class="form-group">
+                <label class="form-label" for="pkg-category">Package Category</label>
+                <select id="pkg-category" class="form-select">
+                  <option>Documents & Contracts</option>
+                  <option selected>Electronics & Gadgets</option>
+                  <option>Apparel & Textiles</option>
+                  <option>Commercial Samples</option>
+                  <option>Healthcare & Pharma</option>
+                  <option>Other Merchandise</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="pkg-weight">Weight (in Kilograms) *</label>
+                <input type="number" id="pkg-weight" class="form-input" value="3.0" min="0.5" step="0.5" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="pkg-dimensions">Dimensions (L x W x H in cm)</label>
+                <input type="text" id="pkg-dimensions" class="form-input" placeholder="e.g. 30 x 20 x 15 cm" value="30 x 20 x 15 cm">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="pkg-value">Declared Shipment Value (₹)</label>
+                <input type="number" id="pkg-value" class="form-input" value="5000">
+              </div>
+
+              <div class="form-group full-width">
+                <label class="form-label" style="margin-bottom: 12px;">Value-Added Protection</label>
+                <div style="display: flex; gap: 24px; flex-wrap: wrap;">
+                  <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                    <input type="checkbox" id="addon-insurance" checked style="accent-color: var(--cyan-primary); width: 18px; height: 18px;">
+                    <span>Transit Insurance Coverage (+₹49)</span>
+                  </label>
+                  <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                    <input type="checkbox" id="addon-fragile" style="accent-color: var(--cyan-primary); width: 18px; height: 18px;">
+                    <span>Special Fragile Handling (+₹35)</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 4: SERVICE TIER -->
+          <div class="wizard-step-pane" data-step="4">
+            <h3 style="font-size: 1.3rem; margin-bottom: 20px; color: var(--cyan-primary);">
+              <i class="fas fa-truck-fast"></i> Step 4: Choose Delivery Speed
+            </h3>
+
+            <div class="service-type-selector">
+              <label class="service-radio-card selected">
+                <input type="radio" name="service_tier" value="1.6" data-name="Express Air Cargo" checked>
+                <div>
+                  <h4 style="font-size: 1.05rem; margin-bottom: 4px;"><i class="fas fa-plane" style="color: var(--cyan-primary);"></i> Express Air Priority</h4>
+                  <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 6px;">Overnight dispatch, guaranteed delivery within 24-48 hours.</p>
+                  <span class="badge">Most Popular</span>
+                </div>
+              </label>
+
+              <label class="service-radio-card">
+                <input type="radio" name="service_tier" value="2.4" data-name="Same-Day Ultra">
+                <div>
+                  <h4 style="font-size: 1.05rem; margin-bottom: 4px;"><i class="fas fa-bolt" style="color: var(--orange-accent);"></i> Same-Day Ultra</h4>
+                  <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 6px;">Hyper-speed sub-12 hour delivery for urgent shipments.</p>
+                  <span class="badge badge-orange">Fastest</span>
+                </div>
+              </label>
+
+              <label class="service-radio-card">
+                <input type="radio" name="service_tier" value="1.0" data-name="Standard Surface">
+                <div>
+                  <h4 style="font-size: 1.05rem; margin-bottom: 4px;"><i class="fas fa-truck" style="color: var(--emerald-success);"></i> Standard Surface</h4>
+                  <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 6px;">Economical reliable ground logistics across 3-5 days.</p>
+                  <span class="badge badge-success">Value</span>
+                </div>
+              </label>
+
+              <label class="service-radio-card">
+                <input type="radio" name="service_tier" value="0.85" data-name="Eco Bulk Cargo">
+                <div>
+                  <h4 style="font-size: 1.05rem; margin-bottom: 4px;"><i class="fas fa-boxes-stacked" style="color: var(--purple-accent);"></i> Eco Bulk Cargo</h4>
+                  <p style="font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 6px;">Tailored for heavy packages exceeding 15 kg.</p>
+                  <span class="badge" style="color: var(--purple-accent); border-color: var(--purple-accent);">Heavy Freight</span>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <!-- Wizard Navigation Buttons -->
+          <div class="wizard-nav-buttons">
+            <button type="button" class="btn btn-glass" id="wizard-prev-btn">
+              <i class="fas fa-arrow-left"></i> Previous Step
+            </button>
+            <button type="button" class="btn btn-primary" id="wizard-next-btn">
+              Next Step <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Right Column: Live Booking Summary Sidebar & Visual Guides -->
+      <aside>
+        <div class="booking-summary-card">
+          <div class="summary-header">
+            <h3 style="font-size: 1.2rem; display: flex; align-items: center; gap: 8px;">
+              <i class="fas fa-receipt" style="color: var(--cyan-primary);"></i> Order Summary
+            </h3>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">Real-Time Rate Engine</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Pickup Origin:</span>
+            <strong id="sum-sender" style="color: var(--text-pure);">Mumbai</strong>
+          </div>
+
+          <div class="summary-row">
+            <span>Destination:</span>
+            <strong id="sum-receiver" style="color: var(--text-pure);">Bengaluru</strong>
+          </div>
+
+          <div class="summary-row">
+            <span>Package Weight:</span>
+            <strong id="sum-weight" style="color: var(--text-pure);">3.0 kg</strong>
+          </div>
+
+          <div class="summary-row">
+            <span>Service Speed:</span>
+            <strong id="sum-service" style="color: var(--cyan-primary);">Express Air Cargo</strong>
+          </div>
+
+          <div class="summary-row">
+            <span>Doorstep Pickup:</span>
+            <strong style="color: var(--emerald-success);">FREE</strong>
+          </div>
+
+          <div class="summary-row">
+            <span>Transit Security:</span>
+            <strong style="color: var(--emerald-success);">Included</strong>
+          </div>
+
+          <div class="summary-total">
+            <span>Grand Total:</span>
+            <span class="amount" id="sum-total">₹447</span>
+          </div>
+
+          <div style="margin-top: 24px; font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; background: rgba(255,255,255,0.02); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+            <i class="fas fa-lock" style="color: var(--emerald-success);"></i> 100% Encrypted & Insured. By confirming, you agree to Mithil Courier Terms of Carriage.
+          </div>
+        </div>
+
+        <!-- Visual Packaging & Doorstep Pickup Promo Cards -->
+        <div class="booking-side-card" style="margin-top: 24px;">
+          <div class="booking-side-img">
+            <img src="../images/booking_parcel.jpg" alt="Smart Holographic Sealed Parcel">
+            <span class="card-img-badge"><i class="fas fa-barcode"></i> Smart Holographic Seal</span>
+          </div>
+          <h4 style="font-size: 1.05rem; margin-bottom: 6px;">Next-Gen Smart Packaging</h4>
+          <p style="font-size: 0.84rem; color: var(--text-secondary);">Each consignment is protected with optical digital seal and active IoT routing code.</p>
+        </div>
+
+        <div class="booking-side-card">
+          <div class="booking-side-img">
+            <img src="../images/doorstep-pickup.jpg" alt="Doorstep Courier Executive">
+            <span class="card-img-badge emerald"><i class="fas fa-user-check"></i> Verified Executive</span>
+          </div>
+          <h4 style="font-size: 1.05rem; margin-bottom: 6px;">Zero-Contact Doorstep Pickup</h4>
+          <p style="font-size: 0.84rem; color: var(--text-secondary);">Our agent weighs, verifies, and scans your package on the spot with digital receipt delivery.</p>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- Guidelines & FAQ Accordion Section -->
+  <section class="section" style="background: rgba(10, 15, 26, 0.6);">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge">Help & Guidelines</span>
+        <h2>Packaging & Shipping Policies</h2>
+        <p>Essential tips to ensure your package arrives in pristine condition.</p>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What items are prohibited from express shipment?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Flammable liquids, explosives, narcotics, perishable contraband, currency notes, and unregistered hazardous chemicals cannot be transported via Mithil Courier Services according to civil aviation guidelines.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How should I package fragile glassware or electronics?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Use minimum 2-3 layers of bubble wrap with corner protectors inside a sturdy corrugated cardboard box. Make sure to check the "Special Fragile Handling" option during booking so our sorting personnel tag your package with neon priority badges.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can I reschedule or cancel a booked pickup?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Yes, you can modify pickup time slots or cancel free of charge up to 30 minutes before your courier agent arrives by contacting our 24/7 support line.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Confirmation Success Modal -->
+  <div class="modal-backdrop" id="booking-success-modal">
+    <div class="modal-content" style="text-align: center;">
+      <button class="modal-close-btn"><i class="fas fa-times"></i></button>
+      
+      <div style="width: 70px; height: 70px; border-radius: 50%; background: rgba(16, 185, 129, 0.15); border: 2px solid var(--emerald-success); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2rem; color: var(--emerald-success); box-shadow: 0 0 25px rgba(16, 185, 129, 0.4);">
+        <i class="fas fa-check"></i>
+      </div>
+
+      <h2 style="font-size: 1.8rem; margin-bottom: 8px;">Shipment Booked!</h2>
+      <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 24px;">
+        Your pickup has been successfully registered with Mithil Courier Services dispatch center.
+      </p>
+
+      <div style="background: rgba(0, 242, 254, 0.08); border: 1px dashed var(--cyan-primary); border-radius: var(--radius-md); padding: 20px; margin-bottom: 24px;">
+        <span style="font-size: 0.8rem; color: var(--text-muted); text-transform: uppercase;">Generated AWB / Tracking Number</span>
+        <div style="font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; color: var(--cyan-primary); margin: 6px 0;" id="modal-awb-code">MCS-99412</div>
+        <button type="button" class="btn btn-glass btn-sm" onclick="copyToClipboard(document.getElementById('modal-awb-code').textContent)">
+          <i class="far fa-copy"></i> Copy AWB
+        </button>
+      </div>
+
+      <div style="display: flex; gap: 12px; justify-content: center;">
+        <a href="tracking.html" class="btn btn-primary" id="modal-track-link">
+          <i class="fas fa-location-crosshairs"></i> Live Track Package
+        </a>
+        <button type="button" class="btn btn-glass modal-close-trigger">
+          Done
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-icon"><i class="fas fa-bolt-lightning"></i></div>
+            <div class="brand-name">Mithil <span>Courier</span></div>
+          </a>
+          <p>Pioneering ultra-fast, tech-enabled parcel and cargo logistics across India. Speed, reliability, and security at your fingertips.</p>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Company</a>
+            <a href="booking.html">Online Booking</a>
+            <a href="tracking.html">Live Tracking</a>
+            <a href="contact.html">Branch Locations</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Logistics Services</h4>
+          <div class="footer-links">
+            <a href="booking.html">Same-Day Ultra</a>
+            <a href="booking.html">Express Air Cargo</a>
+            <a href="booking.html">Surface Freight</a>
+            <a href="booking.html">E-Commerce COD</a>
+            <a href="booking.html">Cold Chain Storage</a>
+          </div>
+        </div>
+
+        <div class="footer-col footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p>Subscribe for network expansion updates, corporate rates, and logistics insights.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed to Mithil Courier newsletter!', 'success'); this.reset();">
+            <input type="email" class="form-input" placeholder="Enter your email address" required>
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 <strong>Mithil Courier Services</strong>. All Rights Reserved.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Carriage</a>
+          <a href="contact.html">Security & Compliance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Chat Support Trigger -->
+  <button class="floating-widget-btn" id="floating-chat-trigger" title="Live Support Assistant">
+    <i class="fas fa-headset"></i>
+  </button>
+
+  <!-- Support Modal -->
+  <div class="modal-backdrop" id="quick-chat-modal">
+    <div class="modal-content">
+      <button class="modal-close-btn"><i class="fas fa-times"></i></button>
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+        <div class="logo-icon"><i class="fas fa-robot"></i></div>
+        <div>
+          <h3 style="font-size: 1.25rem;">Mithil Virtual Assistant</h3>
+          <span style="font-size: 0.8rem; color: var(--emerald-success);"><i class="fas fa-circle"></i> Online 24/7</span>
+        </div>
+      </div>
+      <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 20px;">
+        How can we assist you today? You can track a shipment, estimate costs, or connect with our dispatch center.
+      </p>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <a href="tracking.html" class="btn btn-glass" style="justify-content: flex-start;">
+          <i class="fas fa-search-location" style="color: var(--cyan-primary);"></i> Track a Consignment
+        </a>
+        <a href="booking.html" class="btn btn-glass" style="justify-content: flex-start;">
+          <i class="fas fa-box" style="color: var(--orange-accent);"></i> Book a New Pickup
+        </a>
+        <a href="contact.html" class="btn btn-glass" style="justify-content: flex-start;">
+          <i class="fas fa-phone-volume" style="color: var(--emerald-success);"></i> Call Regional Helpdesk (+91 1800-425-MITHIL)
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Bundle -->
+  <script src="../js/script.js"></script>
+</body>
+</html>

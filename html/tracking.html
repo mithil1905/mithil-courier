@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Shipment Tracking | Mithil Courier Services</title>
+  <meta name="description" content="Track your Mithil Courier consignments in real-time. View live GPS milestones, package status, estimated arrival times, and download delivery receipts.">
+  
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Core Design System -->
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Glowing Mesh & Brand Atmosphere -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+  <div class="ambient-grid"></div>
+  <div class="brand-ambient-backdrop"></div>
+
+  <!-- Main Navigation Header -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo" id="header-brand-logo">
+        <div class="logo-icon"><i class="fas fa-bolt-lightning"></i></div>
+        <div class="brand-name">Mithil <span>Courier</span></div>
+      </a>
+
+      <nav class="nav-menu" id="primary-nav-menu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About Us</a>
+        <a href="booking.html" class="nav-link">Book Courier</a>
+        <a href="tracking.html" class="nav-link active">Track Shipment</a>
+        <a href="contact.html" class="nav-link">Contact & Support</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="booking.html" class="btn btn-primary btn-sm" id="nav-book-btn">
+          <i class="fas fa-paper-plane"></i> Book Shipment
+        </a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" id="mobile-toggle-btn">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero Header -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="badge"><i class="fas fa-satellite-dish"></i> GPS Precision Tracking</span>
+      <h1>Live Consignment <br><span class="grad-text">Tracking Engine</span></h1>
+      <p>Enter your AWB or Consignment Number for live checkpoint updates, transit routing, and estimated arrival time.</p>
+    </div>
+  </section>
+
+  <!-- Tracking Search Console -->
+  <section class="section" style="padding-top: 10px;">
+    <div class="container" style="max-width: 900px;">
+      
+      <div class="tracking-console-card">
+        <form id="tracking-form" class="quick-track-form">
+          <div class="track-input-wrapper" style="padding: 10px 10px 10px 20px;">
+            <i class="fas fa-search-location" style="color: var(--cyan-primary); font-size: 1.3rem; margin-right: 14px;"></i>
+            <input type="text" id="tracking-code-input" placeholder="Enter AWB or Tracking ID (e.g., MCS-88219)" value="MCS-88219" style="font-size: 1.05rem;" required>
+            <button type="submit" class="btn btn-primary btn-lg" style="padding: 12px 28px;">
+              <i class="fas fa-radar"></i> Track Now
+            </button>
+          </div>
+        </form>
+
+        <div class="sample-pills" style="margin-top: 18px; margin-bottom: 0;">
+          <span class="sample-label">Quick Test Shipments:</span>
+          <span class="sample-code-chip" data-code="MCS-88219">MCS-88219 (Out for Delivery)</span>
+          <span class="sample-code-chip" data-code="MCS-40912">MCS-40912 (In Transit)</span>
+          <span class="sample-code-chip" data-code="MCS-10554">MCS-10554 (Delivered)</span>
+        </div>
+      </div>
+
+      <!-- Dynamic Live Tracking Results Container (Populated by JavaScript) -->
+      <div id="tracking-result-section">
+        <!-- Initial pre-loaded state will render via JS init -->
+      </div>
+
+      <!-- Live GPS Telemetry Map & Checkpoint Guarantee Grid -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 30px;">
+        <div class="booking-side-card" style="margin-bottom: 0;">
+          <div class="booking-side-img" style="height: 180px;">
+            <img src="../images/tracking_radar.jpg" alt="Active GPS Telemetry Radar Screen">
+            <span class="card-img-badge"><i class="fas fa-satellite"></i> IoT Global Telemetry Active</span>
+          </div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 6px;">Global Route Radar & Telematics</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary);">Real-time vehicle telemetry, automated geo-fencing alerts, and predictive arrival algorithms updated every 15 seconds.</p>
+        </div>
+
+        <div class="booking-side-card" style="margin-bottom: 0;">
+          <div class="booking-side-img" style="height: 180px;">
+            <img src="../images/checkpoint-scan.jpg" alt="Hub Barcode Scanning">
+            <span class="card-img-badge emerald"><i class="fas fa-barcode"></i> 100% Chain of Custody</span>
+          </div>
+          <h4 style="font-size: 1.1rem; margin-bottom: 6px;">Multi-Point Checkpoint Scans</h4>
+          <p style="font-size: 0.85rem; color: var(--text-secondary);">Every consignment undergoes biometric intake, optical weight check, and tamper seal verification at every transit node.</p>
+        </div>
+      </div>
+
+      <!-- SMS & WhatsApp Notification Box -->
+      <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 30px; margin-top: 30px; display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+        <div>
+          <h4 style="font-size: 1.15rem; margin-bottom: 6px; display: flex; align-items: center; gap: 8px;">
+            <i class="fab fa-whatsapp" style="color: #25D366; font-size: 1.3rem;"></i> Receive Instant WhatsApp Alerts
+          </h4>
+          <p style="font-size: 0.88rem; color: var(--text-secondary);">Get automated delivery milestones pushed directly to your mobile phone.</p>
+        </div>
+        <div style="display: flex; gap: 10px; flex: 1; max-width: 400px;">
+          <input type="tel" class="form-input" placeholder="Enter 10-digit Mobile No." id="notify-phone">
+          <button type="button" class="btn btn-glass" onclick="if(document.getElementById('notify-phone').value) showToast('Subscribed to WhatsApp live alerts!', 'success'); else showToast('Please enter phone number', 'warning');">
+            Notify Me
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Help & Support Grid -->
+  <section class="section" style="background: rgba(10, 15, 26, 0.6);">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge-orange">Need Assistance?</span>
+        <h2>Frequently Asked Tracking Questions</h2>
+        <p>Answers to common delivery and tracking inquiries.</p>
+      </div>
+
+      <div class="faq-accordion">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Where do I find my Tracking ID or AWB Code?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Your Tracking ID is printed at the top of your physical booking slip and sent via SMS and email confirmation (e.g. MCS-XXXXX). If you booked online, check your booking confirmation screen or email inbox.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How frequently is the live GPS milestone updated?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>Our sorting hubs and transport fleet utilize IoT scanners and GPS telematics that update package milestones instantly whenever a parcel is scanned at any hub, relay station, or courier delivery van.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What if my package status says 'Attempted Delivery'?</span>
+            <i class="fas fa-chevron-down faq-icon"></i>
+          </div>
+          <div class="faq-answer">
+            <p>If the delivery agent could not reach the consignee, a free re-delivery attempt is automatically scheduled for the next business morning. You can also contact our 24/7 helpline to schedule a preferred delivery window.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-icon"><i class="fas fa-bolt-lightning"></i></div>
+            <div class="brand-name">Mithil <span>Courier</span></div>
+          </a>
+          <p>Pioneering ultra-fast, tech-enabled parcel and cargo logistics across India. Speed, reliability, and security at your fingertips.</p>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Navigation</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Company</a>
+            <a href="booking.html">Online Booking</a>
+            <a href="tracking.html">Live Tracking</a>
+            <a href="contact.html">Branch Locations</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Logistics Services</h4>
+          <div class="footer-links">
+            <a href="booking.html">Same-Day Ultra</a>
+            <a href="booking.html">Express Air Cargo</a>
+            <a href="booking.html">Surface Freight</a>
+            <a href="booking.html">E-Commerce COD</a>
+            <a href="booking.html">Cold Chain Storage</a>
+          </div>
+        </div>
+
+        <div class="footer-col footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p>Subscribe for network expansion updates, corporate rates, and logistics insights.</p>
+          <form class="newsletter-form" onsubmit="event.preventDefault(); showToast('Subscribed to Mithil Courier newsletter!', 'success'); this.reset();">
+            <input type="email" class="form-input" placeholder="Enter your email address" required>
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 <strong>Mithil Courier Services</strong>. All Rights Reserved.</div>
+        <div style="display: flex; gap: 20px;">
+          <a href="contact.html">Privacy Policy</a>
+          <a href="contact.html">Terms of Carriage</a>
+          <a href="contact.html">Security & Compliance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Quick Chat Support Trigger -->
+  <button class="floating-widget-btn" id="floating-chat-trigger" title="Live Support Assistant">
+    <i class="fas fa-headset"></i>
+  </button>
+
+  <!-- Support Modal -->
+  <div class="modal-backdrop" id="quick-chat-modal">
+    <div class="modal-content">
+      <button class="modal-close-btn"><i class="fas fa-times"></i></button>
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+        <div class="logo-icon"><i class="fas fa-robot"></i></div>
+        <div>
+          <h3 style="font-size: 1.25rem;">Mithil Virtual Assistant</h3>
+          <span style="font-size: 0.8rem; color: var(--emerald-success);"><i class="fas fa-circle"></i> Online 24/7</span>
+        </div>
+      </div>
+      <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 20px;">
+        How can we assist you today? You can track a shipment, estimate costs, or connect with our dispatch center.
+      </p>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        <a href="tracking.html" class="btn btn-glass" style="justify-content: flex-start;">
+          <i class="fas fa-search-location" style="color: var(--cyan-primary);"></i> Track a Consignment
+        </a>
+        <a href="booking.html" class="btn btn-glass" style="justify-content: flex-start;">
+          <i class="fas fa-box" style="color: var(--orange-accent);"></i> Book a New Pickup
+        </a>
+        <a href="contact.html" class="btn btn-glass" style="justify-content: flex-start;">
+          <i class="fas fa-phone-volume" style="color: var(--emerald-success);"></i> Call Regional Helpdesk (+91 1800-425-MITHIL)
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Bundle -->
+  <script src="../js/script.js"></script>
+</body>
+</html>
